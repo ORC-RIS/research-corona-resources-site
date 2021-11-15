@@ -1,13 +1,9 @@
-# Graduate Site Theme
+# Corona Site Theme
 [![forthebadge](https://forthebadge.com/images/badges/built-with-wordpress.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/uses-git.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/powered-by-electricity.svg)](https://forthebadge.com)
 
-**Website:** https://graduate.ucf.edu/
-
-This is the wordpres theme template for Graduate Studies 
-
-Replaced the Ektron site 4/9/2018. (RIP sweet prince)
+**Website:** https://corona.research.ucf.edu/
 
 ## 🛠️ Building and Development
 This will install the latest npm packages
