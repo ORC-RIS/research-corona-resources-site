@@ -1,0 +1,41 @@
+// CSS LOCKING
+// This locks the font size to the width the page
+// http://webtypography.net/2.2.2
+html {
+	font-size: ~"@{min-font}px";
+	font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+}
+@media (min-width: ~"@{min-width}px") and (max-width: ~"@{max-width}px"){
+	html {
+		font-size: calc(~"@{min-font}px + (@{max-font} - @{min-font}) * ( (100vw - @{min-width}px ) / ( @{max-width} - @{min-width}) )");
+	}
+}
+@media (min-width: ~"@{max-width}px"){
+	html {
+		font-size: ~"@{max-font}px";
+	}
+}
+
+.page-content-wrapper {
+	min-height: @content-min-height;
+}
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+
+blockquote {
+	border-top: 2px solid @ucf-yellow;
+	border-bottom: 2px solid @ucf-yellow;
+	font-family: 'Crimson Text', serif;
+	font-size: 1.15rem;
+	line-height: 2.15rem;
+	margin-left: @baseline;
+	margin-right: @baseline;
+	padding: @baseline;
+	& > p {
+		font-family: 'Crimson Text', serif;
+		font-size: 1.15rem;
+		line-height: 2.15rem;
+	}
+}

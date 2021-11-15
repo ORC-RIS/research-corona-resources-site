@@ -1,0 +1,65 @@
+/* UBER MENU STYLING */
+.navbar-brand {
+	font-size: 1rem;
+	margin-right: 0;
+	padding: 10px 0;
+}
+.ubermenu-main .ubermenu-item-level-0 > .ubermenu-target {
+	padding-left: 5px;
+	padding-right: 15px;
+}
+nav.ubermenu-main .ubermenu-item.ubermenu-item-level-0:hover {
+	background: rgba(255,255,255,.3);
+}
+@media (max-width: 1100px) {
+	.navbar-toggleable-md>.container, .navbar-toggleable-md>.container-fluid {
+		display: block;
+	}
+}
+@media (max-width: 800px) {
+	.navbar-toggleable-md>.container, .navbar-toggleable-md>.container-fluid {
+		display: flex;
+	}
+}
+@media (max-width: 1200px) {
+	.navbar-toggleable-md>.container, .navbar-toggleable-md>.container-fluid {
+		width: 100%;
+	}
+}
+@media (min-width: 1200px) {
+	.ubermenu-main .ubermenu-item-level-0 > .ubermenu-target {
+		padding-left: 20px;
+		padding-right: 15px;
+	}
+}
+.wp-plain-menu {
+	font-family: 'Arvo', serif;
+}
+.wp-plain-menu ul {
+	padding-left: 20px;
+	list-style-type: none;
+}
+.wp-plain-menu>ul {
+	padding-left: 0;
+}
+.wp-plain-menu>ul>li:not(:last-of-type) {
+	border: 0;
+	border-bottom: 1px dotted @ucf-yellow;
+}
+.wp-plain-menu>ul>li li:not(:last-of-type) {
+	background-image: linear-gradient(to right, #999 40%, rgba(165, 165, 165, 0) 20%);
+	background-position: bottom;
+	background-size: 3px 1px;
+	background-repeat: repeat-x;
+}
+.wp-plain-menu .current-menu-item>a {
+	font-weight: bold;
+}
+
+.ubermenu .ubermenu-target-description {
+	font-size: 12px !important;
+}
+
+#ubermenu-main-19-primary-2-skipnav {
+	display: none;
+}

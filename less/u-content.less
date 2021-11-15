@@ -1,0 +1,98 @@
+.u-container {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-items: center;
+	& > * , & > section .container {
+		width: 100%;
+		max-width: @content-page-width;
+		flex: 1 1 auto;
+		padding-right: 15px;
+		padding-left: 15px;
+	}
+	& > *:last-child {
+		margin-bottom: 3rem;
+	}
+	& > section:last-child {
+		margin-bottom: 0;
+	}
+	& > blockquote {
+		font-family: 'Crimson Text', serif;
+		line-height: 2.25rem;
+		max-width: calc(~'@{content-page-width} - 30px');
+		& p {
+			font-family: 'Crimson Text', serif;
+			line-height: 2.25rem;
+			margin-bottom: 0;
+			display: block;
+		}
+	}
+	& > table {
+		max-width: @content-page-width;
+		tr:not(:last-of-type) td {
+			border-bottom: 1px solid rgba(0,0,0,.1);
+		}
+		tr:last-of-type td {
+			border-bottom: 1px solid rgba(0,0,0,0);
+		}
+		thead tr:last-child {
+			td, th {
+				border-bottom: 1px solid rgba(0,0,0,.2);
+			}
+		}
+	}
+	& > ol, ul {
+		padding-left: 2.5rem;
+	}
+	& > section {
+		max-width: 100%;
+		padding-right: 0;
+		padding-left: 0;
+	}
+	& > section {
+		max-width: 100%;
+		margin-bottom: 0;
+	}
+	& > hr {
+		padding: 0;
+	}
+	& > .gform_wrapper {
+		max-width: @content-page-width;
+	}
+	& > .normal-list {
+		padding-right: 15px;
+		padding-left: 15px;
+	}
+	.breakout {
+		max-width: 100%;
+		padding-right: 0;
+		padding-left: 0;
+		> .container {
+			width: 100%;
+			max-width: @content-page-width;
+			margin: 0 auto;
+			padding-right: 15px;
+			padding-left: 15px;
+		}
+		&.full > div {
+			max-width: 100%;
+		}
+		&.flex > div {
+			display: flex;
+			flex-wrap: wrap;
+		}
+		&.inverted {
+			background: #333333;
+			color: white;
+
+			a {
+				color: white !important;
+			}
+			a:hover {
+				color: rgba(256,256,256,.8) !important;
+				transition: color .5s;
+			}
+		}
+	}
+}

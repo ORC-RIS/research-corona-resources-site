@@ -1,0 +1,47 @@
+.flex-tile-frame {
+	background: black;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	align-content: flex-start;
+	flex: 1 1 auto;
+}
+.flex-tile-frame .flex-tile {
+	position: relative;
+	display: flex;
+	flex: 0 0 auto;
+	min-width: calc(100%/2);
+}
+.flex-tile-frame .flex-tile:hover .grayscale {
+	filter: none;
+}
+.flex-tile-frame .text-block {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	color: #fff;
+	font-size: 3vw;
+	padding: 2vw 1vw;
+	font-weight: bold;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	line-height: 1;
+	text-shadow: 0 0 10px rgba(0,0,0,.7);
+	text-transform: uppercase;
+	transition: text-shadow .3s;
+}
+.flex-tile-frame .name-top-right {
+	position: absolute;
+	right: 0;
+	top: 0;
+	color: #fff;
+	font-size: 3.5vw;
+	padding: 3vw 2vw;
+	font-style: italic;
+	font-family: Georgia,"Times New Roman",Times,serif;
+	line-height: 1;
+	text-shadow: 0 0 10px transparent;
+	transition: text-shadow .3s;
+}
+.flex-tile-frame .flex-tile:hover .text-block {
+	text-shadow: 0 0 10px rgba(0,0,0,.7);
+}

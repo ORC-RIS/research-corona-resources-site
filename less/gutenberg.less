@@ -1,0 +1,33 @@
+.wp-block-image {
+  figcaption {
+    text-align: left
+  }
+  &.figcaption-align {
+    &-left {
+      figcaption {
+        text-align: left;
+      }
+    }
+    &-center {
+      figcaption {
+        text-align: center;
+      }
+    }
+    &-right {
+      figcaption {
+        text-align: right;
+      }
+    }
+  }
+}
+.wp-block-quote {
+  p:last-of-type {
+    margin-bottom: 0;
+  }
+  cite {
+    display: block;
+    text-align: right;
+    font-style: italic;
+
+  }
+}

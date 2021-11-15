@@ -1,0 +1,111 @@
+table {
+	width: 100%;
+	border-collapse: collapse;
+	th, td {
+		vertical-align: top;
+		text-align: left;
+		padding: 1em .5em;
+		img {
+			width: 100%;
+		}
+		&.numeric {
+			text-align: right;
+		}
+		&.sm {
+			width: 1px;
+			white-space: nowrap;
+		}
+		&:first-of-type {
+			padding-left: 15px;
+		}
+		&:last-of-type {
+			padding-right: 15px;
+		}
+	}
+	tbody {
+		td {
+			padding: .75em;
+			padding: calc(~".75em - 1px");
+		}
+	}
+	&.table-borderless {
+		tr:not(:last-of-type) td {
+			border: none !important;
+		}
+		tr:last-of-type td {
+			border: none !important;
+		}
+	}
+}
+
+@media only screen and (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px)  {
+	table.responsive {
+		display: block;
+		thead, tbody, th, td, tr {
+			display: block;
+			width: 100% !important;
+		}
+	}
+}
+
+
+
+@breakpoint: 480px;
+
+table.responsive-480 {
+	th {
+		display: none;
+	}
+	td {
+		display: block;
+		&:before {
+			content: attr(data-th)": "; // who knew you could do this? The internet, that's who.			font-weight: bold;
+
+			width: 100%;
+			display: inline-block;
+
+			@media ( min-width: @breakpoint ) {
+				display: none;
+			}
+		}
+	}
+	tr {
+		@media (max-width: @breakpoint ) {
+			&:not(:last-of-type) td {
+				border-bottom: 1px solid rgba(0, 0, 0, 0);
+				padding-top: .25rem;
+				padding-bottom: .25rem;
+			}
+
+			&:not(:last-of-type) td:first-of-type {
+				padding-top: 1rem;
+			}
+			&:not(:last-of-type) td:last-of-type {
+				padding-bottom: 1rem;
+				border-bottom: 1px solid rgba(0, 0, 0, .1);
+			}
+
+			&:last-of-type td {
+				border-bottom: 1px solid rgba(0, 0, 0, 0);
+			}
+		}
+	}
+	th, td {
+		text-align: left;
+		padding-left: 15px;
+		&.sm {
+			width: auto;
+			white-space:normal;
+		}
+
+		@media (min-width: @breakpoint ) {
+			display: table-cell;
+			border-bottom: 1px solid rgba(0,0,0,0);
+			&.sm {
+				width: 1px;
+				white-space: nowrap;
+			}
+		}
+
+	}
+}
