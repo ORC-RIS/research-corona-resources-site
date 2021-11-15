@@ -12,3 +12,30 @@ $(function(){
         return false
     });
 });
+function showHideKeywords( btn ) {
+    var column = ourDataTable.column('keywords:name');
+
+    if( column.visible() ) {
+        $(btn).html("Show Keywords");
+        $('#datatable-1').parent().addClass('container');
+    } else {
+        $(btn).html("Hide Keywords");
+        $('#datatable-1').parent().removeClass('container');
+    }
+    column.visible( ! column.visible() );
+    $('#datatable-1').width('100%');
+}
+var isHidingNonSpecifiedAmounts = false;
+function showHideNonSpecifiedAmounts( btn ) {
+    var column = ourDataTable.column('filteramount:name');
+
+    isHidingNonSpecifiedAmounts =! isHidingNonSpecifiedAmounts;
+
+    if( isHidingNonSpecifiedAmounts ) {
+        $(btn).html("Show Unspecified Amounts");
+        column.search('^(?!Not Specified).*',true, false,true).draw();
+    } else {
+        $(btn).html("Hide Unspecified Amounts");
+        column.search('').draw();
+    }
+}
